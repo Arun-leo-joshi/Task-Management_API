@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "6d4f585f-126f-4191-8fcd-90e08a498d10",
+		"name": "Task-Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31896453"
+	},
+	"item": [
+		{
+			"name": "Create-Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Sample test 8\",\r\n    \"description\":\"something to describe it don't know\",\r\n    \"status\":\"IN_PROGRESS\",\r\n    \"priority\":\"HIGH\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5005/tasks/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"tasks",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5005/tasks?priority=HIGH",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "priority",
+							"value": "HIGH"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTask-byID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5005/tasks/67ee9fae0b8e10173b902bd6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"tasks",
+						"67ee9fae0b8e10173b902bd6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update-Task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Updated Task\",\r\n    \"description\":\"This task has been updated\",\r\n    \"status\":\"COMPLETED\",\r\n    \"priority\":\"LOW\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5005/tasks/67eea057977a871f7bb3923a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"tasks",
+						"67eea057977a871f7bb3923a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete-Task",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
